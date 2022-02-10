@@ -1,0 +1,10 @@
+version: 2.1
+
+orbs:
+  docker: circleci/docker@2.0.1
+
+workflows:
+  lint:
+    jobs:
+      - docker/hadolint:
+          dockerfiles: './Dockerfile'
